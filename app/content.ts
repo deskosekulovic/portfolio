@@ -82,7 +82,7 @@ export const profile: Profile = {
   },
 };
 
-export const projects: Project[] = [
+export const companyProjects: Project[] = [
   {
     title: "LiteBit (Web)",
     description:
@@ -118,5 +118,68 @@ export const projects: Project[] = [
     description:
       "National permitting partner combining AI-powered software with licensed architects/engineers and former regulators to accelerate building permit approvals and reduce delays. Worked as frontend developer.",
     tags: ["Next.js", "TypeScript", "Styled Components"],
+  },
+];
+
+export const githubProjects: Project[] = [
+  {
+    title: "portfolio",
+    description: "My personal portfolio (Next.js + TypeScript).",
+    href: "https://github.com/deskosekulovic/portfolio",
+    tags: ["Next.js", "TypeScript", "Tailwind"],
+  },
+  {
+    title: "weather-app-angular",
+    description: "Weather app built with Angular.",
+    href: "https://github.com/deskosekulovic/weather-app-angular",
+    tags: ["Angular", "TypeScript", "Angular Material"],
+  },
+  {
+    title: "Snake",
+    description: "Classic Snake game.",
+    href: "https://github.com/deskosekulovic/Snake",
+    tags: ["JavaScript", "HTML5", "CSS3"],
+  },
+  {
+    title: "yamb",
+    description: "Yamb game (React + React Router + Styled Components).",
+    href: "https://github.com/deskosekulovic/yamb",
+    tags: ["React", "JavaScript", "Styled Components"],
+  },
+  {
+    title: "yamb-redux",
+    description: "Yamb game variant using Redux.",
+    href: "https://github.com/deskosekulovic/yamb-redux",
+    tags: ["React", "Redux", "JavaScript"],
+  },
+  {
+    title: "todo-react",
+    description: "Todo app in React.",
+    href: "https://github.com/deskosekulovic/todo-react",
+    tags: ["React", "JavaScript"],
+  },
+  {
+    title: "weather",
+    description: "Weather app (React + Styled Components).",
+    href: "https://github.com/deskosekulovic/weather",
+    tags: ["React", "JavaScript", "Styled Components"],
+  },
+  {
+    title: "hackernews-redux",
+    description: "Hacker News clone using Redux.",
+    href: "https://github.com/deskosekulovic/hackernews-redux",
+    tags: ["React", "Redux", "JavaScript"],
+  },
+  {
+    title: "hackernews-react",
+    description: "Hacker News clone in React.",
+    href: "https://github.com/deskosekulovic/hackernews-react",
+    tags: ["React", "JavaScript"],
+  },
+  {
+    title: "memory-game",
+    description: "Memory game built with React.",
+    href: "https://github.com/deskosekulovic/memory-game",
+    tags: ["React", "JavaScript"],
   },
 ];
