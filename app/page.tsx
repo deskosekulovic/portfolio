@@ -1,9 +1,28 @@
+import { Metadata } from "next";
 import { ContactCard } from "./components/ContactCard";
 import { ExperienceSection } from "./components/ExperienceSection";
 import { HeroSection } from "./components/HeroSection";
 import { ProjectsSection } from "./components/ProjectsSection";
 import { SiteFooter } from "./components/SiteFooter";
 import { SiteHeader } from "./components/SiteHeader";
+
+export const metadata: Metadata = {
+  title: "Portfolio | Desko Sekulovic",
+  description: "Portfolio with basic information and list of projects.",
+  openGraph: {
+    title: "Portfolio | Desko Sekulovic",
+    description: "Portfolio with basic information and list of projects.",
+    images: ["/me.jpg"],
+    url: "https://portfolio-desko.vercel.app/",
+    siteName: "Portfolio | Desko Sekulovic",
+    locale: "en_US",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function Home() {
   return (

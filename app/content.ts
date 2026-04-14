@@ -40,7 +40,7 @@ export const profile: Profile = {
   education: "MSc in Electrical and Computer Engineering",
   experienceYears: "7+ years",
   experience: [
-    "Thrust -crypto startup (Sep 2025 – Mar 2026)",
+    "Thrust - crypto startup (Sep 2025 – Mar 2026)",
     "Brightmarbles (Sep 2020 – Sept 2025)",
     "Vega IT (Nov 2020 – Feb 2022)",
     "Execom (Mar 2019 – Sep 2020)",
