@@ -1,14 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { profile } from "../content";
-import { auth, signOut } from "@/lib/auth";
+import { auth } from "@/lib/auth";
 import {
   DropdownMenu,
   DropdownMenuContent,
-  DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/dropdown";
-import { LogOutIcon } from "lucide-react";
+import { SignOutMenuItem } from "./SignOutMenuItem";
 
 export async function SiteHeader() {
   const session = await auth();
@@ -65,16 +64,7 @@ export async function SiteHeader() {
                 />
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
-                <DropdownMenuItem
-                  onClick={async () => {
-                    "use server";
-                    await signOut();
-                  }}
-                  className="cursor-pointer"
-                >
-                  <LogOutIcon className="mr-2 h-4 w-4" />
-                  Sign Out
-                </DropdownMenuItem>
+                <SignOutMenuItem />
               </DropdownMenuContent>
             </DropdownMenu>
           ) : null}
