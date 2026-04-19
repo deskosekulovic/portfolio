@@ -147,25 +147,29 @@ export const githubProjects: Project[] = [
   },
   {
     title: "weather-app-angular",
-    description: "Weather app built with Angular.",
+    description:
+      "Weather app built with Angular. Porpuse of this project was to learn Angular and Angular Material.",
     href: "https://github.com/deskosekulovic/weather-app-angular",
     tags: ["Angular", "TypeScript", "Angular Material"],
   },
   {
     title: "Snake",
-    description: "Classic Snake game.",
+    description:
+      "Classic Snake game. I built this game for my first technical interview. I got job offer after this interview :).",
     href: "https://github.com/deskosekulovic/Snake",
-    tags: ["JavaScript", "HTML5", "CSS3"],
+    tags: ["JavaScript", "React", "HTML5", "CSS3"],
   },
   {
     title: "yamb",
-    description: "Yamb game (React + React Router + Styled Components).",
+    description:
+      "Yamb game (React + React Router + Styled Components). I wanted to build something that I like to play with my friends.",
     href: "https://github.com/deskosekulovic/yamb",
     tags: ["React", "JavaScript", "Styled Components"],
   },
   {
     title: "yamb-redux",
-    description: "Yamb game variant using Redux.",
+    description:
+      "Yamb game variant using Redux. Porpuse of this project was to learn Redux.",
     href: "https://github.com/deskosekulovic/yamb-redux",
     tags: ["React", "Redux", "JavaScript"],
   },
@@ -177,13 +181,15 @@ export const githubProjects: Project[] = [
   },
   {
     title: "weather",
-    description: "Weather app (React + Styled Components).",
+    description:
+      "My first React project - Weather app (React + Styled Components). Built with OpenWeather API.",
     href: "https://github.com/deskosekulovic/weather",
     tags: ["React", "JavaScript", "Styled Components"],
   },
   {
     title: "hackernews-redux",
-    description: "Hacker News clone using Redux.",
+    description:
+      "Hacker News clone using Redux. Built with Hacker News API. Porpuse of this project was to learn Redux.",
     href: "https://github.com/deskosekulovic/hackernews-redux",
     tags: ["React", "Redux", "JavaScript"],
   },
