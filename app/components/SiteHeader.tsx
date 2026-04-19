@@ -13,33 +13,39 @@ export async function SiteHeader() {
   const session = await auth();
 
   return (
-    <header className="border-b border-zinc-200/70 dark:border-white/10">
-      <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-6 py-6">
-        <div className="flex flex-col">
-          <span className="text-sm text-zinc-600 dark:text-zinc-400">
+    <header className="sticky top-0 z-50 border-b border-white/6 bg-zinc-950/70 backdrop-blur-xl">
+      <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-6 py-5">
+        <div className="flex flex-col gap-0.5">
+          <span className="font-mono text-[10px] font-medium uppercase tracking-[0.18em] text-violet-300/70">
             Portfolio
           </span>
-          <span className="text-lg font-semibold tracking-tight">
+          <span className="font-display text-lg font-semibold tracking-tight text-zinc-50">
             {profile.name}
           </span>
         </div>
-        <nav className="flex items-center gap-3 text-sm">
+        <nav className="flex items-center gap-1 text-sm sm:gap-2">
+          <a
+            href="#about"
+            className="rounded-full px-3 py-2 text-zinc-300 transition hover:bg-white/8 hover:text-zinc-100"
+          >
+            About
+          </a>
           <a
             href="#projects"
-            className="rounded-full px-3 py-2 text-zinc-700 hover:bg-zinc-200/60 dark:text-zinc-200 dark:hover:bg-white/10"
+            className="rounded-full px-3 py-2 text-zinc-300 transition hover:bg-white/8 hover:text-zinc-100"
           >
             Projects
           </a>
           <a
             href="#contact"
-            className="rounded-full px-3 py-2 text-zinc-700 hover:bg-zinc-200/60 dark:text-zinc-200 dark:hover:bg-white/10"
+            className="rounded-full px-3 py-2 text-zinc-300 transition hover:bg-white/8 hover:text-zinc-100"
           >
             Contact
           </a>
           {session ? (
             <Link
               href="/dashboard"
-              className="rounded-full px-3 py-2 text-zinc-700 hover:bg-zinc-200/60 dark:text-zinc-200 dark:hover:bg-white/10"
+              className="rounded-full px-3 py-2 text-zinc-300 transition hover:bg-white/8 hover:text-zinc-100"
             >
               Dashboard
             </Link>
@@ -47,7 +53,7 @@ export async function SiteHeader() {
           {!session ? (
             <Link
               href="/sign-in"
-              className="rounded-full px-3 py-2 text-zinc-700 hover:bg-zinc-200/60 dark:text-zinc-200 dark:hover:bg-white/10"
+              className="rounded-full px-3 py-2 text-zinc-300 transition hover:bg-white/8 hover:text-zinc-100"
             >
               Sign In
             </Link>
@@ -60,7 +66,7 @@ export async function SiteHeader() {
                   alt="User Avatar"
                   width={32}
                   height={32}
-                  className="rounded-full object-cover cursor-pointer"
+                  className="ml-1 cursor-pointer rounded-full object-cover ring-2 ring-violet-500/30"
                 />
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">

@@ -22,7 +22,10 @@ export type Profile = {
     some: string[];
     languages: string[];
   };
-  summary: string;
+  /** Short line under the role (also used for meta description when set). */
+  tagline?: string;
+  /** About / bio — one string per paragraph. */
+  summary: string[];
   highlights: string[];
   contact: {
     email: string;
@@ -34,7 +37,9 @@ export type Profile = {
 
 export const profile: Profile = {
   name: "Desko Sekulović",
-  role: "Frontend Software Developer",
+  role: "Frontend-focused engineer",
+  tagline:
+    "React, Next.js & TypeScript — performance, real-time UX, production-ready interfaces.",
   location: "Republic of Serbia",
   address: "Save Kovacevica 24, Backo Dobro Polje",
   education: "MSc in Electrical and Computer Engineering",
@@ -67,12 +72,17 @@ export const profile: Profile = {
     some: ["Node.js", "MongoDB", "PHP", "MySQL"],
     languages: ["English (excellent communication)"],
   },
-  summary:
-    "Frontend software developer with 7+ years of experience. Focused on clean code, structural solutions, and building responsive, user-friendly web applications.",
+  summary: [
+    "Frontend-focused engineer with 7+ years of experience building modern web applications, with a strong fullstack mindset when needed. I primarily work with React, Next.js, and TypeScript, and I enjoy turning complex product requirements into clean, scalable, and user-friendly solutions.",
+    "Over the years, I've had the opportunity to work on a wide range of products — from cryptocurrency trading platforms and real-time consumer apps, to healthcare solutions and platforms that simplify building and permitting workflows. Working across these different domains helped me become comfortable with ambiguity and quick to adapt to new problem spaces.",
+    "I'm especially interested in performance, real-time systems, and building responsive interfaces that feel fast and reliable even under heavy data load. Whether it's optimizing rendering, managing server state, or handling real-time updates, I like digging into the details that make an application feel smooth and production-ready.",
+    "Although my main focus is frontend, I've also worked with backend technologies like Next.js API routes, REST, and GraphQL, which allows me to think beyond the UI and understand how data flows through the system end-to-end.",
+    "I enjoy collaborating with teams, contributing to architecture decisions, and improving code quality through clean, maintainable solutions and thoughtful code reviews. I'm always looking for ways to balance simplicity with scalability — building things that work well today but are also ready to grow tomorrow.",
+  ],
   highlights: [
-    "MSc in Electrical and Computer Engineering",
-    "JavaScript/TypeScript, React, Next.js; strong HTML/CSS foundation",
-    "Some experience with Node.js, MongoDB, PHP, MySQL",
+    "7+ years shipping UIs across fintech, healthcare, consumer, and permitting domains",
+    "React / Next.js / TypeScript; performance, real-time updates, and heavy data surfaces",
+    "MSc Electrical & Computer Engineering; fullstack-aware (REST, GraphQL, Next.js APIs)",
   ],
   contact: {
     email: "desko.sekulovic@gmail.com",
@@ -96,7 +106,20 @@ export const companyProjects: Project[] = [
     tags: ["React", "TypeScript", "GraphQL"],
   },
   {
-    title: "Cleaning equipment & full cleaning systems (responsive web app)",
+    title: "GreenLite",
+    description:
+      "National permitting partner combining AI-powered software with licensed architects/engineers and former regulators to accelerate building permit approvals and reduce delays. Worked as frontend developer.",
+    tags: ["Next.js", "TypeScript", "Styled Components"],
+  },
+  {
+    title: "Cura - Medical asisance app",
+    description:
+      "Medical asisance app for patients and doctors. Built responsive UI for helping users to connect with medical experts. Worked as fullstack developer.",
+    tags: ["Next.js", "TypeScript", "Tailwind", "PostgreSQL"],
+  },
+  {
+    title:
+      "Karcher - Cleaning equipment & full cleaning systems (responsive web app)",
     description:
       "Worked in a Scrum team on a responsive web UI for a company producing cleaning equipment and full cleaning systems. Communicated with backend REST endpoints using asynchronous requests.",
     tags: ["Angular", "Angular Material", "HTML5", "REST"],
@@ -112,12 +135,6 @@ export const companyProjects: Project[] = [
     description:
       "Maintenance and feature development across multiple projects for a large maritime & enterprise satellite communications provider (MSS/VSAT).",
     tags: ["OutSystems"],
-  },
-  {
-    title: "GreenLite",
-    description:
-      "National permitting partner combining AI-powered software with licensed architects/engineers and former regulators to accelerate building permit approvals and reduce delays. Worked as frontend developer.",
-    tags: ["Next.js", "TypeScript", "Styled Components"],
   },
 ];
 

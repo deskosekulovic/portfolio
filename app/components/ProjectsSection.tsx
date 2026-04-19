@@ -16,10 +16,10 @@ function ProjectGrid({
     <div className="mt-6 grid gap-4 md:grid-cols-2">
       {projects.map((p) => {
         const Card = (
-          <article className="group h-full rounded-3xl border border-zinc-200/70 bg-white p-6 shadow-sm transition-colors hover:bg-zinc-50 dark:border-white/10 dark:bg-zinc-950 dark:hover:bg-white/5">
+          <article className="group flex h-full flex-col rounded-[1.75rem] border border-white/8 bg-zinc-950/50 p-6 shadow-lg shadow-black/30 backdrop-blur-md transition duration-300 hover:-translate-y-0.5 hover:border-violet-500/30 hover:bg-zinc-900/55 hover:shadow-violet-950/20">
             <div className="flex items-start justify-between gap-4">
               <div className="min-w-0">
-                <h3 className="text-lg font-semibold tracking-tight">
+                <h3 className="font-display text-lg font-semibold tracking-tight text-zinc-50">
                   {p.title}
                 </h3>
                 {p.tags?.length ? (
@@ -27,7 +27,7 @@ function ProjectGrid({
                     {p.tags.map((t) => (
                       <span
                         key={t}
-                        className="rounded-full bg-zinc-100 px-2.5 py-1 text-xs text-zinc-700 dark:bg-white/10 dark:text-zinc-200"
+                        className="rounded-full bg-white/6 px-2.5 py-1 font-mono text-[10px] font-medium uppercase tracking-wide text-violet-200/85"
                       >
                         {t}
                       </span>
@@ -36,7 +36,7 @@ function ProjectGrid({
                 ) : null}
               </div>
               {p.image ? (
-                <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-2xl bg-zinc-100 ring-1 ring-zinc-200/60 dark:bg-white/10 dark:ring-white/10">
+                <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-2xl bg-zinc-800 ring-1 ring-white/10">
                   <Image
                     src={p.image.src}
                     alt={p.image.alt}
@@ -47,7 +47,7 @@ function ProjectGrid({
               ) : null}
             </div>
 
-            <p className="mt-4 line-clamp-4 text-sm leading-6 text-zinc-700 dark:text-zinc-300">
+            <p className="mt-4 line-clamp-4 flex-1 text-sm leading-6 text-zinc-400">
               {p.description}
             </p>
 
@@ -56,16 +56,14 @@ function ProjectGrid({
                 href={p.href}
                 target="_blank"
                 rel="noreferrer"
-                className="mt-5 text-sm font-medium text-zinc-950 dark:text-zinc-50"
+                className="mt-5 inline-flex items-center text-sm font-medium text-violet-300"
               >
                 <span className="underline underline-offset-4">Open</span>
-                <span className="ml-1 opacity-70">→</span>
+                <span className="ml-1 transition group-hover:translate-x-0.5">
+                  →
+                </span>
               </a>
-            ) : (
-              <p className="mt-5 text-xs text-zinc-500 dark:text-zinc-400">
-                Link not added
-              </p>
-            )}
+            ) : null}
           </article>
         );
 
@@ -81,49 +79,42 @@ function ProjectGrid({
 
 export function ProjectsSection() {
   return (
-    <section id="projects" className="mt-14">
-      <div className="flex items-end justify-between gap-6">
+    <section id="projects" className="mt-16 scroll-mt-28 md:mt-20">
+      <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
         <div>
-          <h2 className="text-2xl font-semibold tracking-tight">Projects</h2>
-          <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-            Work projects and open-source projects.
+          <h2 className="font-display text-3xl font-semibold tracking-tight text-zinc-50 md:text-4xl">
+            Projects
+          </h2>
+          <p className="mt-2 max-w-lg text-sm text-zinc-400">
+            Work projects and personal projects.
           </p>
         </div>
-        <span className="text-sm text-zinc-500 dark:text-zinc-400">
-          {companyProjects.length + githubProjects.length} total
-        </span>
       </div>
 
-      <div className="mt-10">
-        <div className="flex items-end justify-between gap-6">
+      <div className="mt-12">
+        <div className="flex flex-col justify-between gap-3 sm:flex-row sm:items-end">
           <div>
-            <h3 className="text-lg font-semibold tracking-tight">
-              Company projects
+            <h3 className="font-display text-xl font-semibold tracking-tight text-zinc-100">
+              Work projects
             </h3>
-            <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
-              Projects delivered while working in companies/teams.
+            <p className="mt-1 text-sm text-zinc-400">
+              Delivered with teams in production environments.
             </p>
           </div>
-          <span className="text-sm text-zinc-500 dark:text-zinc-400">
-            {companyProjects.length}
-          </span>
         </div>
         <ProjectGrid projects={companyProjects} />
       </div>
 
-      <div className="mt-12">
-        <div className="flex items-end justify-between gap-6">
+      <div className="mt-14">
+        <div className="flex flex-col justify-between gap-3 sm:flex-row sm:items-end">
           <div>
-            <h3 className="text-lg font-semibold tracking-tight">
+            <h3 className="font-display text-xl font-semibold tracking-tight text-zinc-100">
               GitHub projects
             </h3>
-            <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
-              Public repositories on GitHub.
+            <p className="mt-1 text-sm text-zinc-400">
+              Public repositories and experiments.
             </p>
           </div>
-          <span className="text-sm text-zinc-500 dark:text-zinc-400">
-            {githubProjects.length}
-          </span>
         </div>
         <ProjectGrid projects={githubProjects} />
       </div>

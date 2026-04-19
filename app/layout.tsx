@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Syne } from "next/font/google";
+import { profile } from "./content";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -12,6 +13,12 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const syne = Syne({
+  variable: "--font-syne",
+  subsets: ["latin"],
+  weight: ["600", "700", "800"],
+});
+
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ??
   (process.env.VERCEL_URL
@@ -20,13 +27,16 @@ const siteUrl =
 
 const canonicalUrl = new URL("/", siteUrl).href;
 
+const metaDescription =
+  profile.tagline ?? profile.summary[0] ?? "Portfolio and selected projects.";
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "Portfolio | Desko Sekulović",
-  description: "Portfolio with basic information and list of projects.",
+  description: metaDescription,
   openGraph: {
     title: "Portfolio | Desko Sekulović",
-    description: "Portfolio with basic information and list of projects.",
+    description: metaDescription,
     images: ["/me.jpg"],
     url: canonicalUrl,
     siteName: "Portfolio | Desko Sekulović",
@@ -47,7 +57,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${syne.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

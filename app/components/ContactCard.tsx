@@ -11,24 +11,30 @@ function ContactRow({
 }) {
   return (
     <div className="flex items-center justify-between gap-3">
-      <dt className="text-zinc-600 dark:text-zinc-400">{label}</dt>
-      <dd className="truncate font-medium">{children}</dd>
+      <dt className="shrink-0 font-mono text-[11px] font-medium uppercase tracking-wider text-violet-300/65">
+        {label}
+      </dt>
+      <dd className="truncate text-right text-sm font-medium text-zinc-200">
+        {children}
+      </dd>
     </div>
   );
 }
 
 export function ContactCard() {
   return (
-    <div className="rounded-3xl border border-zinc-200/70 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-zinc-950">
+    <div className="rounded-3xl border border-white/8 bg-zinc-950/55 p-6 shadow-lg shadow-black/40 backdrop-blur-md md:p-7">
       <div className="flex items-center justify-between gap-4">
         <div className="min-w-0">
-          <p className="text-sm text-zinc-600 dark:text-zinc-400">Currently</p>
-          <p className="truncate text-base font-medium">
+          <p className="font-mono text-[11px] font-medium uppercase tracking-wider text-violet-300/70">
+            Currently
+          </p>
+          <p className="mt-1 truncate text-base font-semibold tracking-tight text-zinc-50">
             Open to collaboration / job
           </p>
         </div>
-        <div className="relative h-10 w-10 overflow-hidden rounded-xl bg-zinc-100 dark:bg-white/10">
-          <Image src="/me.jpg" alt="Avatar" fill sizes="40px" />
+        <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-2xl bg-zinc-800 ring-2 ring-violet-500/25">
+          <Image src="/me.jpg" alt="Avatar" fill sizes="48px" />
         </div>
       </div>
 
@@ -37,7 +43,7 @@ export function ContactCard() {
           <a
             id="contact"
             href={`mailto:${profile.contact.email}`}
-            className="hover:underline"
+            className="text-violet-300 transition hover:text-violet-200 hover:underline"
           >
             {profile.contact.email}
           </a>
@@ -63,7 +69,7 @@ export function ContactCard() {
           <ContactRow label="GitHub">
             <a
               href={profile.contact.github}
-              className="hover:underline"
+              className="text-violet-300 transition hover:text-violet-200 hover:underline"
               target="_blank"
               rel="noreferrer"
             >
@@ -76,7 +82,7 @@ export function ContactCard() {
           <ContactRow label="LinkedIn">
             <a
               href={profile.contact.linkedin}
-              className="hover:underline"
+              className="text-violet-300 transition hover:text-violet-200 hover:underline"
               target="_blank"
               rel="noreferrer"
             >
