@@ -1,6 +1,6 @@
 "use client";
 
-import { GithubIcon } from "@/app/components/GithubIcon";
+import { GithubIcon } from "@/features/ui/icons/github";
 import { signIn } from "next-auth/react";
 
 const SignInGithub = () => {

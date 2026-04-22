@@ -1,4 +1,4 @@
-import { profile } from "../content";
+import { profile } from "@/app/content";
 
 export function SiteFooter() {
   return (
@@ -11,3 +11,4 @@ export function SiteFooter() {
     </footer>
   );
 }
+

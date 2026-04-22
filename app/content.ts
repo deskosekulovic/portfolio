@@ -6,6 +6,7 @@ export type Project = {
     alt: string;
   };
   href?: string;
+  link?: string;
   tags?: string[];
 };
 
@@ -69,7 +70,7 @@ export const profile: Profile = {
       "Tailwind",
       "Git",
     ],
-    some: ["Node.js", "MongoDB", "PHP", "MySQL"],
+    some: ["Node.js", "MongoDB", "PHP", "MySQL", "PostgreSQL"],
     languages: ["English (excellent communication)"],
   },
   summary: [
@@ -94,15 +95,21 @@ export const profile: Profile = {
 
 export const companyProjects: Project[] = [
   {
+    title: "Thrust - Crypto trading platform startup",
+    description:
+      "Developed real-time features for a consumer web app (chat, notifications) using Socket.IO. Designed scalable state management with React Query and Jotai for dynamic content feeds. Built performant UI for subscription and monetization features using Tailwind CSS and Radix UI. Worked closely with backend teams to integrate APIs and ensure a seamless user experience.",
+    tags: ["React", "Jotai", "TypeScript", "Radix UI", "WebSockets"],
+  },
+  {
     title: "LiteBit (Web)",
     description:
-      "Leading cryptocurrency trading platform in Europe. Users can trade 70+ coins via web platform and mobile application. Responsibilities included clean code structure, feature planning with the team, ensuring test coverage, technical documentation, Agile/Scrum work, and code reviews.",
+      "Cryptocurrency trading platform. Users can trade 70+ coins via web platform and mobile application. Responsibilities included clean code structure, feature planning with the team, ensuring test coverage, technical documentation, Agile/Scrum work, and code reviews.",
     tags: ["React", "Redux", "TypeScript", "Radix UI"],
   },
   {
     title: "Umbrella",
     description:
-      "Module for creating topics/articles plus FAQs with simple answers or follow-up questions. Responsive UI for desktop and mobile (Android/iOS).",
+      "Worked on module for creating topics/articles plus FAQs with simple answers or follow-up questions. Responsive UI for desktop and mobile (Android/iOS).",
     tags: ["React", "TypeScript", "GraphQL"],
   },
   {
@@ -114,7 +121,7 @@ export const companyProjects: Project[] = [
   {
     title: "Cura - Medical asisance app",
     description:
-      "Medical asisance app for patients and doctors. Built responsive UI for helping users to connect with medical experts. Worked as fullstack developer.",
+      "Medical asisance app for patients and doctors. Aplication for online ordering presciptions and other medical products Built responsive UI for helping users to connect with medical experts. Worked as fullstack developer.",
     tags: ["Next.js", "TypeScript", "Tailwind", "PostgreSQL"],
   },
   {
@@ -146,6 +153,14 @@ export const githubProjects: Project[] = [
     tags: ["Next.js", "TypeScript", "Tailwind"],
   },
   {
+    title: "Snake-pixi",
+    description:
+      "Snake game built with Pixi.js. Porpuse of this project was to learn Pixi.js.",
+    href: "https://github.com/deskosekulovic/snake-pixi",
+    tags: ["JavaScript", "Pixi.js", "HTML5", "CSS3"],
+    link: "https://snake-pixi.vercel.app/",
+  },
+  {
     title: "weather-app-angular",
     description:
       "Weather app built with Angular. Porpuse of this project was to learn Angular and Angular Material.",
@@ -165,6 +180,7 @@ export const githubProjects: Project[] = [
       "Yamb game (React + React Router + Styled Components). I wanted to build something that I like to play with my friends.",
     href: "https://github.com/deskosekulovic/yamb",
     tags: ["React", "JavaScript", "Styled Components"],
+    link: "https://yamb-desko.vercel.app/",
   },
   {
     title: "yamb-redux",

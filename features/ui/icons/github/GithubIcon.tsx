@@ -18,3 +18,4 @@ export const GithubIcon = ({ className }: { className?: string }) => {
     </svg>
   );
 };
+
