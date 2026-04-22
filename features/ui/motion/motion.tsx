@@ -176,4 +176,3 @@ export function HoverLift({ children, ...props }: HoverLiftProps) {
     </motion.div>
   );
 }
-

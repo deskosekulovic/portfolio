@@ -1,5 +1,3 @@
-"use client";
-
 import { profile } from "@/app/content";
 import { HoverLift, Item, Reveal, Stagger } from "@/features/ui/motion";
 
@@ -57,4 +55,3 @@ export function SkillsSection() {
     </Reveal>
   );
 }
-

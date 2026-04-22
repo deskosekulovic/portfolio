@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import { companyProjects, githubProjects } from "@/app/content";
 import { HoverLift, Item, Reveal, Stagger } from "@/features/ui/motion";
@@ -42,7 +40,12 @@ function ProjectGrid({
                 </div>
                 {p.image ? (
                   <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-2xl bg-zinc-800 ring-1 ring-white/10">
-                    <Image src={p.image.src} alt={p.image.alt} fill sizes="48px" />
+                    <Image
+                      src={p.image.src}
+                      alt={p.image.alt}
+                      fill
+                      sizes="48px"
+                    />
                   </div>
                 ) : null}
               </div>
@@ -139,4 +142,3 @@ export function ProjectsSection() {
     </section>
   );
 }
-

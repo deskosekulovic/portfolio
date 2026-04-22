@@ -1,5 +1,3 @@
-"use client";
-
 import { profile } from "@/app/content";
 import { ItemLi, Reveal, StaggerList } from "@/features/ui/motion";
 
@@ -28,4 +26,3 @@ export function ExperienceSection() {
     </Reveal>
   );
 }
-
