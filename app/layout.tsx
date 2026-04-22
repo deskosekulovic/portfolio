@@ -59,7 +59,11 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${syne.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="flex h-dvh flex-col overflow-hidden">
+        <div className="themed-scrollbar min-h-0 flex-1 overflow-x-hidden overflow-y-auto">
+          {children}
+        </div>
+      </body>
     </html>
   );
 }
