@@ -21,7 +21,7 @@ function ProjectGrid({
       {projects.map((p) => (
         <Item key={p.title} className="h-full">
           <HoverLift className="h-full">
-            <article className="group flex h-full flex-col rounded-[1.75rem] border border-white/8 bg-zinc-950/50 p-6 shadow-lg shadow-black/30 backdrop-blur-md transition duration-300 hover:border-violet-500/30 hover:bg-zinc-900/55 hover:shadow-violet-950/20">
+            <article className="group flex h-full flex-col rounded-[1.75rem] border border-white/12 bg-zinc-900/55 p-6 shadow-lg shadow-black/35 ring-1 ring-white/5 backdrop-blur-md transition duration-300 hover:border-violet-400/40 hover:bg-zinc-900/70 hover:shadow-violet-950/25">
               <div className="flex items-start justify-between gap-4">
                 <div className="min-w-0">
                   <h3 className="font-display text-lg font-semibold tracking-tight text-zinc-50">

@@ -28,7 +28,7 @@ export function ContactCard() {
   return (
     <Reveal>
       <HoverLift className="rounded-3xl">
-        <div className="rounded-3xl border border-white/8 bg-zinc-950/55 p-6 shadow-lg shadow-black/40 backdrop-blur-md md:p-7">
+        <div className="rounded-3xl border border-white/12 bg-zinc-900/60 p-6 shadow-lg shadow-black/45 ring-1 ring-white/5 backdrop-blur-md md:p-7">
           <div className="flex items-center justify-between gap-4">
             <div className="min-w-0">
               <p className="font-mono text-[11px] font-medium uppercase tracking-wider text-violet-300/70">

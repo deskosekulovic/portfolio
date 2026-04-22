@@ -87,7 +87,7 @@ export function HeroSection({ right }: { right?: ReactNode }) {
 
       <Reveal
         id="about"
-        className="scroll-mt-28 rounded-3xl border border-white/8 bg-zinc-950/50 p-8 shadow-lg shadow-black/40 backdrop-blur-md md:p-10"
+        className="scroll-mt-28 rounded-3xl border border-white/12 bg-zinc-900/55 p-8 shadow-lg shadow-black/45 ring-1 ring-white/5 backdrop-blur-md md:p-10"
         delay={0.15}
       >
         <h2 className="font-display text-2xl font-semibold tracking-tight text-zinc-50 md:text-3xl">

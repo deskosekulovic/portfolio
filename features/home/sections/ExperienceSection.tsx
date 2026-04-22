@@ -7,7 +7,7 @@ export function ExperienceSection() {
   if (!profile.experience?.length) return null;
 
   return (
-    <Reveal className="mt-12 rounded-3xl border border-white/8 bg-zinc-950/45 p-6 shadow-lg shadow-black/30 backdrop-blur-md md:p-8">
+    <Reveal className="mt-12 rounded-3xl border border-white/12 bg-zinc-900/55 p-6 shadow-lg shadow-black/35 ring-1 ring-white/5 backdrop-blur-md md:p-8">
       <h2 className="font-display text-xl font-semibold tracking-tight text-zinc-50 md:text-2xl">
         Experience
       </h2>

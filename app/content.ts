@@ -155,9 +155,9 @@ export const githubProjects: Project[] = [
   {
     title: "Snake-pixi",
     description:
-      "Snake game built with Pixi.js. Porpuse of this project was to learn Pixi.js.",
+      "Snake game built with Pixi.js. Porpuse of this project was to learn Pixi.js and refresh my knowledge of JavaScript.",
     href: "https://github.com/deskosekulovic/snake-pixi",
-    tags: ["JavaScript", "Pixi.js", "HTML5", "CSS3"],
+    tags: ["JavaScript", "TypeScript", "React", "Pixi.js", "HTML5", "CSS3"],
     link: "https://snake-pixi.vercel.app/",
   },
   {

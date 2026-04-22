@@ -7,7 +7,7 @@ export function SkillsSection() {
   if (!profile.skills) return null;
 
   return (
-    <Reveal className="mt-6 rounded-3xl border border-white/10 bg-[radial-gradient(ellipse_120%_80%_at_40%_0%,rgba(139,92,246,0.15),transparent_55%),linear-gradient(to_bottom_right,rgba(255,255,255,0.06),rgba(255,255,255,0.02))] p-6 shadow-lg shadow-violet-950/20 backdrop-blur-md">
+    <Reveal className="mt-6 rounded-3xl border border-white/12 bg-[radial-gradient(ellipse_120%_80%_at_40%_0%,rgba(139,92,246,0.15),transparent_55%),linear-gradient(to_bottom_right,rgba(255,255,255,0.08),rgba(255,255,255,0.03))] p-6 shadow-lg shadow-black/35 ring-1 ring-white/5 backdrop-blur-md">
       <div className="flex items-start justify-between gap-6">
         <div className="min-w-0">
           <h2 className="font-mono text-[11px] font-semibold uppercase tracking-[0.2em] text-violet-200/85">
